@@ -947,6 +947,7 @@
         <item>@string/pie_size_default</item>
         <item>@string/pie_size_large</item>
         <item>@string/pie_size_gigantic</item>
+        <item>@string/pie_size_monster</item>
     </string-array>
 
     <string-array name="values_pie_size" translatable="false">
@@ -954,6 +955,25 @@
         <item>1.0</item>
         <item>1.1</item>
         <item>1.2</item>
+        <item>1.4</item>
+    </string-array>
+
+    <string-array name="entries_halo_size">
+        <item>@string/halo_size_miniscule</item>
+        <item>@string/halo_size_small</item>
+        <item>@string/halo_size_default</item>
+        <item>@string/halo_size_large</item>
+        <item>@string/halo_size_gigantic</item>
+        <item>@string/halo_size_monster</item>
+    </string-array>
+
+    <string-array name="values_halo_size" translatable="false">
+        <item>0.6</item>
+        <item>0.8</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.6</item>
     </string-array>
 
     <string-array name="entries_pie_mode">
@@ -968,6 +988,22 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <string-array name="entries_pie_angle">
+        <item>@string/pie_angle_none</item>
+        <item>@string/pie_angle_small</item>
+        <item>@string/pie_angle_normal</item>
+        <item>@string/pie_angle_big</item>
+        <item>@string/pie_angle_huge</item>
+    </string-array>
+
+    <string-array name="values_pie_angle" translatable="false">
+        <item>0</item>
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
     </string-array>
 
     <string-array name="entries_pie_gap">
@@ -985,6 +1021,7 @@
     </string-array>
 
     <string-array name="entries_pie_trigger">
+        <item>@string/pie_trigger_none</item>
         <item>@string/pie_trigger_small</item>
         <item>@string/pie_trigger_normal</item>
         <item>@string/pie_trigger_big</item>
@@ -992,6 +1029,7 @@
     </string-array>
 
     <string-array name="values_pie_trigger" translatable="false">
+        <item>0.0</item>
         <item>0.5</item>
         <item>1.0</item>
         <item>2.0</item>
@@ -1087,6 +1125,64 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+
+    <string-array name="hardware_keys_action_entries" translatable="false">
+        <item>@string/hardware_keys_action_nothing</item>
+        <item>@string/hardware_keys_action_menu</item>
+        <item>@string/hardware_keys_action_app_switch</item>
+        <item>@string/hardware_keys_action_search</item>
+        <item>@string/hardware_keys_action_voice_search</item>
+        <item>@string/hardware_keys_action_in_app_search</item>
+    </string-array>
+
+    <string-array name="hardware_keys_action_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Auto-brightness sensitivity -->
+    <string-array name="auto_brightness_sensitivity_entries" translatable="false">
+        <item>@string/auto_brightness_sensitivity_verylow</item>
+        <item>@string/auto_brightness_sensitivity_low</item>
+        <item>@string/auto_brightness_sensitivity_medium</item>
+        <item>@string/auto_brightness_sensitivity_high</item>
+        <item>@string/auto_brightness_sensitivity_veryhigh</item>
+    </string-array>
+
+    <integer-array name="auto_brightness_sensitivity_values">
+        <item>150</item>
+        <item>125</item>
+        <item>100</item>
+        <item>50</item>
+        <item>25</item>
+    </integer-array>
+
+    <string-array name="entries_halo_state">
+        <item>@string/halo_state_black</item>
+        <item>@string/halo_state_white</item>
+    </string-array>
+
+    <string-array name="values_halo_state" translatable="false">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- NFC settings. -->
+    <string-array name="nfc_polling_mode_entries">
+       <item>@string/nfc_polling_mode_screen_off</item>
+       <item>@string/nfc_polling_mode_screen_locked</item>
+       <item>@string/nfc_polling_mode_screen_unlocked</item>
+    </string-array>
+
+    <string-array name="nfc_polling_mode_values">
+       <item>1</item>
+       <item>2</item>
+       <item>3</item>
     </string-array>
 
 </resources>

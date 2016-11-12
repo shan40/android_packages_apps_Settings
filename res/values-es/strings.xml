@@ -522,6 +522,10 @@
     <string name="android_beam_disabled_summary" msgid="1737782116894793393">"No disponible porque la función NFC está desactivada"</string>
     <string name="android_beam_label" msgid="6257036050366775040">"Android Beam"</string>
     <string name="android_beam_explained" msgid="6981652347448777459">"Si la función Android Beam está activada, puedes juntar tu dispositivo con otro compatible con la tecnología NFC para compartir el contenido de las aplicaciones. Por ejemplo, puedes transferir páginas del navegador, vídeos de YouTube, contactos y mucho más."\n\n"Solo tienes que unir los dispositivos (normalmente, por la parte trasera) y, a continuación, tocar la pantalla de tu dispositivo. Las aplicaciones determinan el contenido que puede compartirse."</string>
+    <string name="nfc_polling_mode_title">Modo de sondeo NFC</string>
+    <string name="nfc_polling_mode_screen_off">Pantalla apagada</string>
+    <string name="nfc_polling_mode_screen_locked">Pantalla encendida, bloqueado</string>
+    <string name="nfc_polling_mode_screen_unlocked">Pantalla encendida, desbloqueado (defecto)</string>
     <string name="nsd_quick_toggle_title" msgid="3125572815278848258">"Detección de aplicaciones"</string>
     <string name="nsd_quick_toggle_summary" msgid="155692215972781276">"Permitir que las aplicaciones de otros dispositivos puedan ver las aplicaciones de este dispositivo"</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
@@ -1369,8 +1373,8 @@
     <string name="power_phone" msgid="5392641106474567277">"Llamadas de voz"</string>
     <string name="power_idle" product="tablet" msgid="4612478572401640759">"Tablet inactivo"</string>
     <string name="power_idle" product="default" msgid="9055659695602194990">"Teléfono inactivo"</string>
-    <string name="usage_type_cpu" msgid="715162150698338714">"Total de CPU"</string>
-    <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"Primer plano de la CPU"</string>
+    <string name="usage_type_cpu" msgid="715162150698338714">"Total"</string>
+    <string name="usage_type_cpu_foreground" msgid="6500579611933211831">"Primer plano"</string>
     <string name="usage_type_wake_lock" msgid="5125438890233677880">"Activo"</string>
     <string name="usage_type_gps" msgid="7989688715128160790">"GPS"</string>
     <string name="usage_type_wifi_running" msgid="8234997940652067049">"Wi-Fi"</string>
@@ -1380,8 +1384,8 @@
     <string name="usage_type_data_recv" msgid="7251090882025234185">"Datos recibidos"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Audio"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Vídeo"</string>
-    <string name="usage_type_on_time" msgid="3351200096173733159">"Tiempo de activación"</string>
-    <string name="usage_type_no_coverage" msgid="3797004252954385053">"Tiempo sin señal"</string>
+    <string name="usage_type_on_time" msgid="3351200096173733159">@string/usage_type_wake_lock</string>
+    <string name="usage_type_no_coverage" msgid="3797004252954385053">"Sin señal"</string>
     <string name="battery_action_stop" msgid="649958863744041872">"Forzar detención"</string>
     <string name="battery_action_app_details" msgid="7861051816778419018">"Información de la aplicación"</string>
     <string name="battery_action_app_settings" msgid="4570481408106287454">"Ajustes de aplicación"</string>
@@ -1832,6 +1836,8 @@
     <string name="global_locale_change_title" msgid="5956281361384221451">"Cambiar idioma"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Cambiar tamaño de fuente"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Mostrar notificaciones"</string>
+    <string name="app_halo_label_black">Agregar a lista negra de HALO</string>
+    <string name="app_halo_label_white">Agregar a lista blanca de HALO</string>
     <string name="help_label" msgid="1107174367904110532">"Ayuda"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Cuenta para contenido"</string>
     <string name="user_picture_title" msgid="7297782792000291692">"ID de foto"</string>
@@ -1886,6 +1892,8 @@
     <string name="lock_screen_settings">Pantalla de bloqueo</string>
     <string name="allow_rotate_title">Activar rotación</string>
     <string name="allow_rotate_summary">Permite el modo paisaje en la pantalla de bloqueo</string>
+    <string name="allow_quick_unlock_title">Desbloqueo rápido</string>
+    <string name="allow_quick_unlock_summary">Desbloquear automáticamente cuando se introduce la clave correcta</string>
     <string name="see_through_title">Ver a través</string>
     <string name="see_through_summary">Permite observar la aplicación detrás de la pantalla de bloqueo</string>
     <string name="maximize_widgets_title">Maximizar widgets</string>
@@ -1928,6 +1936,16 @@
     <string name="tool_bar_settings">Barras de herramientas</string>
     <string name="tool_bar_status_header">Barra de estado</string>
     <string name="tool_bar_navigation_header">Barra de navegación</string>
+    <string name="halo_hide_title">Ocultar HALO tras la actividad</string>
+    <string name="halo_hide_summary">HALO aparecerá para tareas entrantes y se desplazará fuera de vista después de un rato</string>
+    <string name="halo_reversed_title">Revertir gestos de HALO</string>
+    <string name="halo_reversed_summary">Aplica para cambio de tareas y los gestos de movimiento</string>
+    <string name="halo_state_title">Política de HALO</string>
+    <string name="halo_state_summary">Activa la lista negra/blanca de notificaciones</string>
+    <string name="halo_state_black">Lista negra</string>
+    <string name="halo_state_white">Lista blanca</string>
+    <string name="halo_pause_title">Pausar aplicación activa</string>
+    <string name="halo_pause_summary">Al iniciar una aplicación con HALO, la aplicación actual será pausada</string>
     <string name="quick_pulldown_title">Despliegue rápido</string>
     <string name="quick_pulldown_summary">El borde de la barra de notificaciones desplegará el panel de ajustes rápidos</string>
     <string name="title_collapse_panel">Cierre automático</string>
@@ -1993,8 +2011,29 @@
     <string name="network_mode_2g_3g_3g2g">2G/Sólo 3G/3G+2G</string>
     <string name="add_title">Añadir</string>
     <string name="tiles_reset_message">¿Eliminar todos los controles y restaurar los valores por defecto?</string>
-    <string name="pie_controls_title">Controles circulares</string>
-    <string name="pie_controls_summary">Permite la navegación y el reporte de estado en el modo de escritorio expandido</string>
+    <string name="hardware_keys_title">Teclas físicas</string>
+    <string name="hardware_keys_bindings_title">Acciones de tecla</string>
+    <string name="hardware_keys_enable_custom_title">Habilitar acciones personalizadas</string>
+    <string name="hardware_keys_home_long_press_title">Tecla Inicio (pulsación larga)</string>
+    <string name="hardware_keys_menu_press_title">Tecla Menú</string>
+    <string name="hardware_keys_menu_long_press_title">Tecla Menú (pulsación larga)</string>
+    <string name="hardware_keys_assist_press_title">Tecla Búsqueda</string>
+    <string name="hardware_keys_assist_long_press_title">Tecla Búsqueda (pulsación larga)</string>
+    <string name="hardware_keys_app_switch_press_title">Tecla Cambio Aplicación</string>
+    <string name="hardware_keys_app_switch_long_press_title">Tecla Cambio Aplicación (pulsación larga)</string>
+    <string name="hardware_keys_show_overflow_title">Mostrar menú emergente</string>
+    <string name="hardware_keys_show_overflow_summary">Mostrar el icono del menú emergente dentro de las aplicaciones</string>
+    <string name="hardware_keys_show_overflow_toast_enable">El botón de menú emergente puede no mostrarse hasta que la aplicación sea reiniciada</string>
+    <string name="hardware_keys_show_overflow_toast_disable">El botón de menú emergente puede no ocultarse hasta que la aplicación sea reiniciada</string>
+    <string name="hardware_keys_action_nothing">Sin acción</string>
+    <string name="hardware_keys_action_menu">Abrir/Cerrar menú</string>
+    <string name="hardware_keys_action_app_switch">Cambio entre aplicaciones recientes</string>
+    <string name="hardware_keys_action_search">Asistente de búsqueda</string>
+    <string name="hardware_keys_action_voice_search">Búsqueda por voz</string>
+    <string name="hardware_keys_action_in_app_search">Búsqueda dentro de la aplicación</string>
+    <string name="additional_options_title">Opciones adicionales</string>
+    
+    <string name="pie_controls_title">Controles circulares</string>   
     <string name="pie_gravity_title">Ubicación de los controles</string>
     <string name="pie_gravity_summary">Seleccionar la ubicación donde se encontrarán los controles circulares</string>
     <string name="pie_gravity_top">Arriba</string>
@@ -2012,6 +2051,14 @@
     <string name="pie_size_small">Pequeño</string>
     <string name="pie_size_large">Grande</string>
     <string name="pie_size_gigantic">Gigante</string>
+    <string name="pie_size_monster">Monstruoso</string>
+    <string name="pie_angle_title">Ángulo inferior</string>
+    <string name="pie_angle_summary">Ajusta el angulo entre el borde la pantalla y los controles</string>
+    <string name="pie_angle_none">Ninguno</string>
+    <string name="pie_angle_small">Pequeño</string>
+    <string name="pie_angle_normal">Normal (defecto)</string>
+    <string name="pie_angle_big">Grande</string>
+    <string name="pie_angle_huge">Enorme</string>
     <string name="pie_gap_title">Espacio entre los controles</string>
     <string name="pie_gap_summary">Ajustar el espacio entre los elementos</string>
     <string name="pie_gap_none">Sin espacio</string>
@@ -2024,12 +2071,11 @@
     <string name="pie_stick_summary">Evita los cambios de orientación cuando se gira la pantalla</string>
     <string name="pie_trigger_title">Area de disparo</string>
     <string name="pie_trigger_summary">Determinar el tamaño de el area que activará los controles circulares</string>
+    <string name="pie_trigger_none">Ninguna (desactivar)</string>
     <string name="pie_menu_title">Botón menú persistente</string>
     <string name="pie_menu_summary">Siempre mostrar el botón menú, incluso cuando no sea necesario</string>
     <string name="pie_search_title">Botón búsqueda</string>
     <string name="pie_search_summary">Activar boton de busqueda en los controles circulares</string>
-    <string name="pie_restart_launcher_title">Redibujar inicio</string>
-    <string name="pie_restart_launcher_summary">Cambiar el tamaño de la pantalla programaticamente, puede producir ciertos problemas de visualización. Esta opción ayuda a evitar problemas la pantalla de inicio, a costa de un ligero oscurecimiento (recomendado)</string>
     <string name="navigation_bar_title">Controles de navegación</string>
     <string name="navigation_bar_help_text">1 - Para empezar a editar, toca el candado\n\n2 - Toca cualquier botón para asignar una acción\n\n3 - Mantén presionado un botón para reorganizar\n\n4 - Para guardar, toca el candado nuevamente\n\n5 - Para restaurar la configuración por defecto, toca el icono de resetear\n\n</string>
     <string name="navigation_bar_tips">&#8226; Solo se puede asignar una acción a un botón a la vez\n\n&#8226; El botón de inicio no puede ser reasignado\n\n&#8226; Los botones de los lados, no pueden ser reorganizados</string>
@@ -2046,6 +2092,9 @@
     <string name="adb_over_network">"ADB sobre TCP/IP"</string>
     <string name="adb_over_network_summary">"Activar la depuración TCP/IP sobre las interfaces de red (Wi-Fi, redes USB). Esta configuración se restablece al reiniciar el dispositivo."</string>
     <string name="adb_over_network_warning">"AVISO: ¡Cuando 'ADB sobre TCP/IP' este activo, su teléfono estará abierto a intrusiones en todas las redes conectadas, incluida la red de datos GSM!\n\nUse sólo esta característica cuando esté conectado a redes de confianza.\n\n¿Desea realmente activar esta función?"</string>
+    <string name="vibration_title">Vibración del teléfono</string>
+    <string name="notification_convert_sound_to_vibration_title">Conversión de notificaciones</string>
+    <string name="notification_convert_sound_to_vibration_summary">Convierte el sonido a vibraciones durante el modo de vibración</string>
     <string name="quiet_hours_title">Modo \u00ABtranquilidad\u00BB</string>
     <string name="quiet_hours_summary">Configurar las horas en las que el dispositivo debe de estar en modo \u00ABtranquilidad\u00BB</string>
     <string name="quiet_hours_note_title">Nota</string>
@@ -2090,4 +2139,12 @@
     <string name="auto_brightness_menu_edit_lux">Editar</string>
     <string name="auto_brightness_menu_split">Dividir</string>
     <string name="auto_brightness_menu_remove">Eliminar</string>
+    <string name="lockscreen_custom_background_title">Fondo</string>
+    <string name="lockscreen_custom_background_dialog_title">Seleccionar color</string>
+    <string name="lockscreen_background_result_successful">Fondo modificado satisfactoriamente</string>
+    <string name="lockscreen_background_result_not_successful">No se ha podido modificar el fondo</string>
+    <string name="lockscreen_background_color_fill">Relleno de color</string>
+    <string name="lockscreen_background_custom_image">Imagen personalizada</string>
+    <string name="lockscreen_background_default_wallpaper">Imagen por defecto</string>
+    
 </resources>

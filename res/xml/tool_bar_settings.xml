@@ -68,6 +68,45 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="toolbar_halo"
+        android:title="@string/halo_settings_title">
+
+        <ListPreference
+            android:key="halo_state"
+            android:dialogTitle="@string/halo_state_title"
+            android:title="@string/halo_state_title"
+            android:summary="@string/halo_state_summary"
+            android:entries="@array/entries_halo_state"
+            android:entryValues="@array/values_halo_state" />
+
+        <CheckBoxPreference
+            android:key="halo_hide"
+            android:title="@string/halo_hide_title"
+            android:summary="@string/halo_hide_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="halo_reversed"
+            android:title="@string/halo_reversed_title"
+            android:summary="@string/halo_reversed_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="halo_size"
+            android:dialogTitle="@string/halo_size_title"
+            android:title="@string/halo_size_title"
+            android:summary="@string/halo_size_summary"
+            android:entries="@array/entries_halo_size"
+            android:entryValues="@array/values_halo_size" />
+
+        <CheckBoxPreference
+            android:key="halo_pause"
+            android:title="@string/halo_pause_title"
+            android:summary="@string/halo_pause_summary" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="toolbar_navigation"
@@ -84,6 +123,11 @@
             android:title="@string/navigation_bar_title" />
 
     </PreferenceCategory>
+
+    <PreferenceScreen
+            android:key="hardware_keys"
+            android:fragment="com.android.settings.cyanogenmod.HardwareKeys"
+            android:title="@string/hardware_keys_title" />
 
     <PreferenceCategory
         android:key="toolbar_pie_controls"
@@ -132,6 +176,14 @@
             android:entryValues="@array/values_pie_size" />
 
         <ListPreference
+            android:key="pie_angle"
+            android:dialogTitle="@string/pie_angle_title"
+            android:title="@string/pie_angle_title"
+            android:summary="@string/pie_angle_summary"
+            android:entries="@array/entries_pie_angle"
+            android:entryValues="@array/values_pie_angle" />
+
+        <ListPreference
             android:key="pie_gap"
             android:dialogTitle="@string/pie_gap_title"
             android:title="@string/pie_gap_title"
@@ -148,11 +200,6 @@
             android:key="pie_search"
             android:title="@string/pie_search_title"
             android:summary="@string/pie_search_summary" />
-
-        <CheckBoxPreference
-            android:key="pie_restart_launcher"
-            android:title="@string/pie_restart_launcher_title"
-            android:summary="@string/pie_restart_launcher_summary" />
             
     </PreferenceCategory>
 
